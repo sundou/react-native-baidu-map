@@ -63,6 +63,7 @@ project(':react-native-baidu-map').projectDir = new File(settingsDir, '../node_m
 | onMapDoubleClick        | func  | undefined|
 | onMarkerClick           | func  | undefined|
 | onMapPoiClick           | func  | undefined|
+| markerType              | string| default  | default,build,miniFirehouse,river,outdoorFireHydrant,firePool
 
 #### MapModule Methods (Deprecated)
     setMarker(double lat, double lng)
