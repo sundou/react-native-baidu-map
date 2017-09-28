@@ -35,6 +35,18 @@ public class MarkerUtil {
             case "build":
                 bitmap = BitmapDescriptorFactory.fromResource(R.mipmap.icon_build);
                 break;
+            case "miniFirehouse":
+                bitmap = BitmapDescriptorFactory.fromResource(R.mipmap.icon_miniFirehouse);
+                break;
+            case "river":
+                bitmap = BitmapDescriptorFactory.fromResource(R.mipmap.icon_river);
+                break;
+            case "outdoorFireHydrant":
+                bitmap = BitmapDescriptorFactory.fromResource(R.mipmap.icon_outdoorFireHydrant);
+                break;
+            case "firePool":
+                bitmap = BitmapDescriptorFactory.fromResource(R.mipmap.icon_firePool);
+                break;
             default:
                 bitmap = BitmapDescriptorFactory.fromResource(R.mipmap.icon_gcoding);
                 break;
