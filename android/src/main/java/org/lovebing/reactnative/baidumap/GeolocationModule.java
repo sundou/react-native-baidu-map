@@ -15,6 +15,8 @@ import com.baidu.mapapi.search.geocode.OnGetGeoCoderResultListener;
 import com.baidu.mapapi.search.geocode.ReverseGeoCodeOption;
 import com.baidu.mapapi.search.geocode.ReverseGeoCodeResult;
 import com.baidu.mapapi.utils.CoordinateConverter;
+import com.baidu.mapapi.utils.DistanceUtil;
+import com.baidu.mapapi.utils.SpatialRelationUtil;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactMethod;
@@ -75,6 +77,22 @@ public class GeolocationModule extends BaseModule
         converter.coord(sourceLatLng);
         LatLng desLatLng = converter.convert();
         return desLatLng;
+
+    }
+
+    @ReactMethod
+    public void isCircleContainsPoint(double clat, double clng, int radius, double lat, double lng){
+        Boolean result;
+        double distance;
+        LatLng p1 = new LatLng(clat, clng);
+        LatLng p2 = new LatLng(lat, lng);
+        result = SpatialRelationUtil.isCircleContainsPoint(p1, radius, p2);
+        distance = DistanceUtil. getDistance(p1, p2);
+
+        WritableMap params = Arguments.createMap();
+        params.putBoolean("result", result);
+        params.putDouble("distance", distance);
+        sendEvent("isCircleContainsPoint", params);
 
     }
 

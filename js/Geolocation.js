@@ -95,5 +95,29 @@ export default {
         resolve(resp);
       });
     });
+  },
+
+  isCircleContainsPoint(clat,clng, radius, lat, lng){
+    if (Platform.OS == 'ios') {
+
+    } else {
+      
+      return new Promise((resolve, reject) => {
+        try {
+          console.log(arguments);
+          _module.isCircleContainsPoint( clat,clng, radius, lat,lng);
+        }
+        catch (e) {
+          reject(e);
+          return;
+        }
+        DeviceEventEmitter.once('isCircleContainsPoint', resp => {
+          console.log(resp);
+          resolve(resp.result);
+        });
+      });
+
+      // console.log(_module.isCircleContainsPoint( 121.61874973627664,29.92069732886056, 1000, 121.6188229494265,29.923283035640132));
+    }
   }
 };
