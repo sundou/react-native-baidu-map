@@ -88,6 +88,19 @@ RCT_EXPORT_METHOD(reverseGeoCodeGPS:(double)lat lng:(double)lng) {
     //[reverseGeoCodeSearchOption release];
 }
 
+RCT_EXPORT_METHOD(isCircleContainsPoint:(double)clat clng:(double)clng radius:(int)radius lat:(double)lat lng:(double)lng) {
+    NSMutableDictionary *body = [self getEmptyBody];
+    BMKMapPoint point1 = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(clat,clng));
+    BMKMapPoint point2 = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(lat,lng));
+    CLLocationDistance distance = BMKMetersBetweenMapPoints(point1,point2);
+    
+    BOOL ptInCircle = BMKCircleContainsCoordinate(CLLocationCoordinate2DMake(lat,lng), CLLocationCoordinate2DMake(clat,clng), radius);
+    body[@"result"] = [NSString stringWithFormat:@"%d", ptInCircle];
+    body[@"distance"] = [NSString stringWithFormat:@"%f", distance];
+    [self sendEvent:@"isCircleContainsPoint" body:body];
+    
+}
+
 -(BMKGeoCodeSearch *)getGeocodesearch{
     if(geoCodeSearch == nil) {
         geoCodeSearch = [[BMKGeoCodeSearch alloc]init];

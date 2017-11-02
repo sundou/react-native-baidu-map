@@ -98,9 +98,9 @@ export default {
   },
 
   isCircleContainsPoint(clat,clng, radius, lat, lng){
-    if (Platform.OS == 'ios') {
+    // if (Platform.OS == 'ios') {
 
-    } else {
+    // } else {
       
       return new Promise((resolve, reject) => {
         try {
@@ -113,11 +113,12 @@ export default {
         }
         DeviceEventEmitter.once('isCircleContainsPoint', resp => {
           console.log(resp);
+          resp.result = resp.result == 1 ? true : false;
           resolve(resp.result);
         });
       });
 
       // console.log(_module.isCircleContainsPoint( 121.61874973627664,29.92069732886056, 1000, 121.6188229494265,29.923283035640132));
-    }
+    // }
   }
 };
