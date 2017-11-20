@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		966D3B671FBEBE430078C89E /* YYServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 966D3B651FBEBE430078C89E /* YYServiceManager.m */; };
+		967D54A01FC26DA800D7FBC7 /* YYConst.mm in Sources */ = {isa = PBXBuildFile; fileRef = 967D549E1FC26DA700D7FBC7 /* YYConst.mm */; };
+		96A87FCD1FBBD777008A6E1E /* TraceModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A87FCC1FBBD777008A6E1E /* TraceModule.m */; };
 		EF154DCB1D56218D003146DF /* BaiduMapModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF3C22621CC2C3BE0099E9B6 /* BaiduMapModule.h */; };
 		EF154DCC1D562193003146DF /* RCTBaiduMapViewManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF6660E71D55E68000DB8D08 /* RCTBaiduMapViewManager.h */; };
 		EF3C225A1CC2C30D0099E9B6 /* RCTBaiduMapView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF3C22591CC2C30D0099E9B6 /* RCTBaiduMapView.h */; };
@@ -33,6 +36,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		966D3B651FBEBE430078C89E /* YYServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYServiceManager.m; sourceTree = "<group>"; };
+		966D3B661FBEBE430078C89E /* YYServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYServiceManager.h; sourceTree = "<group>"; };
+		967D549E1FC26DA700D7FBC7 /* YYConst.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = YYConst.mm; sourceTree = "<group>"; };
+		967D549F1FC26DA700D7FBC7 /* YYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYConst.h; sourceTree = "<group>"; };
+		96A87FCB1FBBD76F008A6E1E /* TraceModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TraceModule.h; sourceTree = "<group>"; };
+		96A87FCC1FBBD777008A6E1E /* TraceModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TraceModule.m; sourceTree = "<group>"; };
 		EF3C22561CC2C30D0099E9B6 /* libRCTBaiduMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTBaiduMap.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3C22591CC2C30D0099E9B6 /* RCTBaiduMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTBaiduMapView.h; sourceTree = "<group>"; };
 		EF3C225B1CC2C30D0099E9B6 /* RCTBaiduMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTBaiduMapView.m; sourceTree = "<group>"; };
@@ -76,6 +85,10 @@
 		EF3C22581CC2C30D0099E9B6 /* RCTBaiduMap */ = {
 			isa = PBXGroup;
 			children = (
+				967D549F1FC26DA700D7FBC7 /* YYConst.h */,
+				967D549E1FC26DA700D7FBC7 /* YYConst.mm */,
+				966D3B661FBEBE430078C89E /* YYServiceManager.h */,
+				966D3B651FBEBE430078C89E /* YYServiceManager.m */,
 				EF3C22591CC2C30D0099E9B6 /* RCTBaiduMapView.h */,
 				EF3C225B1CC2C30D0099E9B6 /* RCTBaiduMapView.m */,
 				EF3C22621CC2C3BE0099E9B6 /* BaiduMapModule.h */,
@@ -86,6 +99,8 @@
 				EF4ABB0C1DC378CF008E75C9 /* GeolocationModule.m */,
 				EF4ABB0E1DC37929008E75C9 /* BaseModule.h */,
 				EF4ABB0F1DC3793A008E75C9 /* BaseModule.m */,
+				96A87FCB1FBBD76F008A6E1E /* TraceModule.h */,
+				96A87FCC1FBBD777008A6E1E /* TraceModule.m */,
 			);
 			path = RCTBaiduMap;
 			sourceTree = "<group>";
@@ -147,10 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF4ABB0D1DC378CF008E75C9 /* GeolocationModule.m in Sources */,
+				966D3B671FBEBE430078C89E /* YYServiceManager.m in Sources */,
 				EF4ABB101DC3793B008E75C9 /* BaseModule.m in Sources */,
+				967D54A01FC26DA800D7FBC7 /* YYConst.mm in Sources */,
 				EF3C22641CC2C3D30099E9B6 /* BaiduMapModule.m in Sources */,
 				EF3C225C1CC2C30D0099E9B6 /* RCTBaiduMapView.m in Sources */,
 				EF6660E91D55E69B00DB8D08 /* RCTBaiduMapViewManager.m in Sources */,
+				96A87FCD1FBBD777008A6E1E /* TraceModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
